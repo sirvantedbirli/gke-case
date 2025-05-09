@@ -1,0 +1,17 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: grafana-vs
+  namespace: monitoring
+spec:
+  hosts:
+  - "grafana.com"
+  gateways:
+  - istio-system/cluster-gateway
+  http:
+  - route:
+    - destination:
+        host: prometheus-grafana
+        port:
+          number: 80
+          

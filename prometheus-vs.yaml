@@ -1,0 +1,16 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: prometheus-vs
+  namespace: monitoring
+spec:
+  hosts:
+  - "prometheus.com"
+  gateways:
+  - istio-system/cluster-gateway
+  http:
+  - route:
+    - destination:
+        host: prometheus-kube-prometheus-prometheus
+        port:
+          number: 9090

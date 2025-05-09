@@ -1,0 +1,18 @@
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: sample-app-scaler
+  namespace: sample-app
+spec:
+  scaleTargetRef:
+    name: sample-app
+    kind: Deployment
+  minReplicaCount: 1
+  maxReplicaCount: 3
+  pollingInterval: 15  
+  cooldownPeriod: 120   
+  triggers:
+  - type: cpu
+    metadata:
+      type: Utilization
+      value: "25"
