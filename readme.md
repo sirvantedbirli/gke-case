@@ -150,14 +150,14 @@ kubectl apply -f prometheus-vs.yaml
 
 ### Prometheus ve Grafana
 
-- **Prometheus**: http://prometheus.com
-- **Grafana**: http://grafana.com
+- **Prometheus**: http://sirvanpromet.com
+- **Grafana**: http://sirvangrafana.com
   - Kullanıcı adı: admin
   - Şifre: prom-operator (veya kubectl komutunu kullanarak alın: `kubectl get secret prometheus-grafana -n monitoring -o jsonpath="{.data.admin-password}" | base64 --decode ; echo`)
 
 ### Örnek Uygulama
 
-- **URL**: http://sample-app.com
+- **URL**: http://sirvan.com
 
 ## Test Etme
 
