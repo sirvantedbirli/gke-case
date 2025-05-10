@@ -147,7 +147,7 @@ kubectl apply -f prometheus-vs.yaml
 ```
 
 ## Erişim Bilgileri
-
+Bu uygulamalara erişeibilmek için local bilgisayarınızda /etc/hosts dosyasının içerisine istio ingress-gateway loadbalancer external ip bilgisinin karşısına aşağıdaki domainleri girmelisiniz.
 ### Prometheus ve Grafana
 
 - **Prometheus**: http://sirvanpromet.com
